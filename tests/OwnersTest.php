@@ -15,6 +15,7 @@ class OwnersTest extends TestCase
         $response = $this->call('GET', '/api/owners');
 
         $this->assertEquals(200, $response->status());
+        $this->assertEquals('{}', $response->getContent());
     }
 
     public function testCreatingAnOwner()
